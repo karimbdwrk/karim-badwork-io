@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Head from 'next/head';
+import Script from 'next/script'
 import Header from '../components/globals/header'
 import { Container, Row, Col } from 'react-bootstrap'
 import Hero from '../components/hero'
@@ -16,7 +17,9 @@ export default class Home extends React.Component {
           <link rel="icon" href="/favicon.ico" />
           {/* <link rel="stylesheet" href="https://use.typekit.net/hgs8pyn.css"></link>
           <link rel="stylesheet" href="node_modules/@glidejs/glide/dist/css/glide.core.min.css" /> */}
-          <link rel="stylesheet" href="node_modules/@glidejs/glide/dist/css/glide.theme.min.css" /><script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.0/anime.min.js" integrity="sha256-hBMojZuWKocCflyaG8T19KBq9OlTlK39CTxb8AUWKhY=" crossorigin="anonymous"></script>
+          {/* <link rel="stylesheet" href="node_modules/@glidejs/glide/dist/css/glide.theme.min.css" /> */}
+          {/* <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.0/anime.min.js" integrity="sha256-hBMojZuWKocCflyaG8T19KBq9OlTlK39CTxb8AUWKhY=" crossorigin="anonymous"></script> */}
+          <Script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.0/anime.min.js" integrity="sha256-hBMojZuWKocCflyaG8T19KBq9OlTlK39CTxb8AUWKhY=" crossorigin="anonymous"></Script>
         </Head>
         <Header />
   

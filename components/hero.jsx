@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import anime from '../scripts/anime.js';
 
 class Hero extends React.Component {
 
