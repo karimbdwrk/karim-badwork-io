@@ -19,7 +19,6 @@ export default class Home extends React.Component {
           <link rel="stylesheet" href="node_modules/@glidejs/glide/dist/css/glide.core.min.css" /> */}
           {/* <link rel="stylesheet" href="node_modules/@glidejs/glide/dist/css/glide.theme.min.css" /> */}
           {/* <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.0/anime.min.js" integrity="sha256-hBMojZuWKocCflyaG8T19KBq9OlTlK39CTxb8AUWKhY=" crossorigin="anonymous"></script> */}
-          <Script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.0/anime.min.js" integrity="sha256-hBMojZuWKocCflyaG8T19KBq9OlTlK39CTxb8AUWKhY=" crossorigin="anonymous"></Script>
         </Head>
         <Header />
   
@@ -38,6 +37,8 @@ export default class Home extends React.Component {
             </Col>
           </Row>
         </Container>
+
+        <Script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.0/anime.min.js" integrity="sha256-hBMojZuWKocCflyaG8T19KBq9OlTlK39CTxb8AUWKhY=" crossorigin="anonymous"></Script>
       </>
     )
   }
