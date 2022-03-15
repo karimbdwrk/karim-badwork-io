@@ -1,0 +1,47 @@
+#wesh .morray {
+  display: none;
+}
+
+h1 {
+  font-family: Termina, sans-serif;
+  font-weight: 800;
+}
+
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#header {
+  padding: 15px 0;
+  font-family: Termina, sans-serif;
+}
+
+#hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+#hero div {
+  font-size: 14rem;
+  font-family: Termina, sans-serif;
+  font-weight: 800;
+  letter-spacing: -0.5rem;
+  line-height: 14rem;
+}
+#hero div#firstWord {
+  transform: translateX(-360px);
+}
+#hero div#secondWord {
+  transform: translateX(360px);
+}
+
+.test {
+  height: 100vh;
+}
