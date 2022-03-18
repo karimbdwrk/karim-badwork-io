@@ -4,6 +4,7 @@ import Script from 'next/script'
 import Header from '../components/globals/header'
 import { Container, Row, Col } from 'react-bootstrap'
 import Hero from '../components/hero'
+import Description from '../components/description'
 
 export default class Home extends React.Component {
 
@@ -33,7 +34,20 @@ export default class Home extends React.Component {
         <Container fluid>
           <Row>
             <Col>
-              <div className="test"></div>
+              <div className="test">
+                <h1>BADWORK</h1>  
+                <div className="wrapper">
+                  <div className="example">KairosSans</div>
+                </div>
+              </div>
+            </Col>
+          </Row>
+        </Container>
+  
+        <Container fluid>
+          <Row>
+            <Col>
+              <Description />
             </Col>
           </Row>
         </Container>

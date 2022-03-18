@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import anime from '../scripts/anime.js';
 
-class Hero extends React.Component {
+class Description extends React.Component {
 
     componentDidMount () {
 
@@ -12,16 +12,16 @@ class Hero extends React.Component {
             let scrollY = window.scrollY
  
             anime({
-                targets: "#firstWord",
-                marginLeft: 360 + scrollY*2,
+                targets: "#description .rs-gif",
+                translateY: -scrollY/2,
                 loop: false,
                 delay: 0,
-                easing: "easeOutQuart"
+                easing: "easeOutQuint"
             });
 
             anime({
-                targets: "#secondWord",
-                marginRight: 360 + scrollY*2,
+                targets: "#description .title",
+                translateX: -scrollY,
                 loop: false,
                 delay: 0,
                 easing: "easeOutQuint"
@@ -32,13 +32,13 @@ class Hero extends React.Component {
     render() {
 
         return (
-            <div id="hero">
-                <div id="firstWord">CREATIVE</div>
-                <div id="secondWord">DEVELOPER</div>
+            <div id="description">
+                <img src="https://res.cloudinary.com/db9fhztig/image/upload/v1647382530/rs_nqfpou.gif" width="480" height="264" className="rs-gif" />
+                <h2 className="title">WHO AM I ?</h2>
             </div>
         )
 
     }
 }
 
-export default Hero
+export default Description

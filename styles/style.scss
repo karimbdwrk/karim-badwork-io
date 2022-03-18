@@ -4,9 +4,24 @@
     }
 }
 
+@font-face {
+    font-family: KairosSans;
+    font-display: swap;
+    src: url(https://yoksel.github.io/variable-fonts/assets/fonts/KairosSans/KairosSans_Variable.ttf) format("truetype");
+}
+
+.container-fluid {
+    max-width: 100vw;
+}
+
 h1 {
     font-family: Termina, sans-serif;
     font-weight: 800;
+}
+
+h2 {
+    font-family: Termina, sans-serif;
+    font-weight: 700;
 }
 
 // HERO
@@ -49,6 +64,67 @@ body {
     }
 }
 
+//////////TEST///////////////
+
+@keyframes fontVariations {
+    0% {
+        font-variation-settings: "ital" 0, "wght" 900, "wdth" 75;
+    }
+    50% {
+        font-variation-settings: "ital" 0, "wght" 250, "wdth" 75;
+    }
+    75% {
+        font-variation-settings: "ital" 1, "wght" 250, "wdth" 125;
+    }
+    100% {
+        font-variation-settings: "ital" 0, "wght" 900, "wdth" 75;
+    }
+}
+
 .test {
+    min-height: 100vh;
+
+    h1 {
+        animation: fontVariations 7s infinite;
+    }
+}
+
+
+.wrapper {
+    text-align: center;
+  }
+  
+  .example {
+    position: relative;
+    font-family: KairosSans;
+    font-size: 100px; 
+    animation: fontVariations 7s infinite;
+  }
+  
+  @supports (-webkit-background-clip: text) {
+    .example {
+      background: linear-gradient(to right bottom,
+        indigo 10%, crimson, orange, 
+        gold, teal, indigo, purple
+      );
+      -webkit-text-fill-color: transparent;
+      -webkit-background-clip: text;
+    }
+  }
+
+//////////END TEST///////////////
+
+#description {
     height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    iframe.rs-gif {
+        transform: translateY(-360px);
+    }
+
+    .title {
+        font-size: 10rem;
+    }
 }
