@@ -5,8 +5,24 @@ import Header from '../components/globals/header'
 import { Container, Row, Col } from 'react-bootstrap'
 import Hero from '../components/hero'
 import Description from '../components/description'
+import Works from '../components/works'
+import Stack from '../components/stack'
+import Contact from '../components/contact'
+import Footer from '../components/globals/footer'
 
 export default class Home extends React.Component {
+
+  componentDidMount() {
+    window.addEventListener('scroll', (event) => {
+
+      let scrollY = window.scrollY
+      console.log(scrollY)
+
+      if (scrollY > window.innerHeight) {
+        console.log('scroll 100%')
+      }
+    })
+  }
 
   render(){
 
@@ -21,33 +37,34 @@ export default class Home extends React.Component {
           {/* <link rel="stylesheet" href="node_modules/@glidejs/glide/dist/css/glide.theme.min.css" /> */}
           {/* <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.0/anime.min.js" integrity="sha256-hBMojZuWKocCflyaG8T19KBq9OlTlK39CTxb8AUWKhY=" crossorigin="anonymous"></script> */}
         </Head>
-        <Header />
-  
+        <div id="glitchBg"></div>
         <Container fluid>
           <Row>
             <Col>
+              <Header />
               <Hero />
-            </Col>
-          </Row>
-        </Container>
-  
-        <Container fluid>
-          <Row>
-            <Col>
-              <div className="test">
-                <h1>BADWORK</h1>  
-                <div className="wrapper">
-                  <div className="example">KairosSans</div>
-                </div>
-              </div>
-            </Col>
-          </Row>
-        </Container>
-  
-        <Container fluid>
-          <Row>
-            <Col>
-              <Description />
+              <Container>
+                <Row>
+                  <Col>
+                    <Description />
+                  </Col>
+                  <Col>
+                    <Works />
+                    <Stack />
+                  </Col>
+                </Row>
+                <Row>
+                  <Col>
+                    <div id="quote">
+                      <p>I’m always interested about cool stuff 😎. <br />Are you minding project? 🤙</p>
+                    </div>
+                  </Col>
+                  <Col>
+                    <Contact />
+                  </Col>
+                </Row>
+              </Container>
+              <Footer />
             </Col>
           </Row>
         </Container>

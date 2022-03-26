@@ -7,6 +7,54 @@
   font-display: swap;
   src: url(https://yoksel.github.io/variable-fonts/assets/fonts/KairosSans/KairosSans_Variable.ttf) format("truetype");
 }
+@keyframes movie {
+  0% {
+    transform: translate(0, 0);
+  }
+  10% {
+    transform: translate(-5%, -5%);
+  }
+  20% {
+    transform: translate(-10%, 5%);
+  }
+  30% {
+    transform: translate(5%, -10%);
+  }
+  40% {
+    transform: translate(-5%, 15%);
+  }
+  50% {
+    transform: translate(-10%, 5%);
+  }
+  60% {
+    transform: translate(15%, 0);
+  }
+  70% {
+    transform: translate(0, 10%);
+  }
+  80% {
+    transform: translate(-15%, 0);
+  }
+  90% {
+    transform: translate(10%, 5%);
+  }
+  100% {
+    transform: translate(5%, 0);
+  }
+}
+#glitchBg {
+  position: fixed;
+  pointer-events: none;
+  animation: movie 1s steps(4) infinite;
+  background-image: url(https://badwork.fr/assets/img/movie.png);
+  height: 200%;
+  left: -50%;
+  top: -50%;
+  width: 200%;
+  opacity: 0.5;
+  z-index: 99;
+}
+
 .container-fluid {
   max-width: 100vw;
 }
@@ -28,11 +76,53 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-color: #101010;
+  color: #E7E7E7;
+}
+body #__next {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 #header {
+  position: absolute;
+  width: 100vw;
   padding: 15px 0;
   font-family: Termina, sans-serif;
+}
+#header .logo {
+  width: max-content;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+#header #customNav {
+  width: 100vw;
+  position: fixed;
+  height: 0;
+  top: 0;
+  left: 0;
+  z-index: 9;
+  background-color: #FF342333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#header #customNav ul {
+  transform: translateY(-100%);
+  font-size: 48px;
+  list-style: none;
+  padding: 0;
+}
+#header .nav {
+  justify-content: space-between;
+}
+#header .nav .nav-item .nav-link {
+  color: #E7E7E7;
+}
+#header .nav .nav-item .nav-link:hover {
+  color: #c7c7c7;
 }
 
 #hero {
@@ -42,68 +132,196 @@ body {
   align-items: center;
   height: 100vh;
 }
-#hero div {
+#hero .hero-txt {
   font-size: 14rem;
   font-family: Termina, sans-serif;
   font-weight: 800;
   letter-spacing: -0.5rem;
   line-height: 14rem;
+  color: #303030;
+  transition: all 250ms ease;
 }
-#hero div#firstWord {
+#hero .hero-txt#firstWord {
   transform: translateX(-360px);
 }
-#hero div#secondWord {
+#hero .hero-txt#secondWord {
   transform: translateX(360px);
 }
-
-@keyframes fontVariations {
-  0% {
-    font-variation-settings: "ital" 0, "wght" 900, "wdth" 75;
-  }
-  50% {
-    font-variation-settings: "ital" 0, "wght" 250, "wdth" 75;
-  }
-  75% {
-    font-variation-settings: "ital" 1, "wght" 250, "wdth" 125;
-  }
-  100% {
-    font-variation-settings: "ital" 0, "wght" 900, "wdth" 75;
-  }
+#hero .social-container {
+  position: absolute;
+  right: 30px;
+  bottom: 30px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 150px;
 }
-.test {
-  min-height: 100vh;
+#hero .social-container.hide {
+  opacity: 0;
+  transition: opacity 250ms ease;
 }
-.test h1 {
-  animation: fontVariations 7s infinite;
+#hero .social-container img {
+  max-height: 20px;
+  filter: invert(0.75);
 }
-
-.wrapper {
-  text-align: center;
+#hero .social-container a:hover img {
+  transition: filter 250ms ease;
+  filter: invert(1);
 }
 
-.example {
-  position: relative;
-  font-family: KairosSans;
-  font-size: 100px;
-  animation: fontVariations 7s infinite;
-}
-
-@supports (-webkit-background-clip: text) {
-  .example {
-    background: linear-gradient(to right bottom, indigo 10%, crimson, orange, gold, teal, indigo, purple);
-    -webkit-text-fill-color: transparent;
-    -webkit-background-clip: text;
-  }
-}
 #description {
+  position: sticky;
+  top: 25vh;
   height: 100vh;
   display: flex;
-  justify-content: center;
-  align-items: center;
-}
-#description iframe.rs-gif {
-  transform: translateY(-360px);
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
 }
 #description .title {
   font-size: 10rem;
+}
+#description .desc-container h2 {
+  font-size: 4rem;
+  margin-bottom: 50px;
+}
+#description .desc-container p {
+  font-size: 1.4rem;
+  font-family: Termina, sans-serif;
+  font-weight: 100;
+}
+#description .desc-container p span {
+  font-weight: 500;
+}
+#description .social-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 150px;
+  margin-top: 90px;
+}
+#description .social-container img {
+  max-height: 20px;
+  filter: invert(0.75);
+}
+#description .social-container a:hover img {
+  transition: filter 250ms ease;
+  filter: invert(1);
+}
+
+.selected-works h2 {
+  font-size: 46px;
+  font-weight: 800;
+  font-family: Termina, sans-serif;
+  color: #E7E7E7;
+  width: 100%;
+  text-align: right;
+  margin-bottom: 60px;
+}
+.selected-works .works-list {
+  display: flex;
+  flex-direction: column;
+}
+.selected-works .works-list .work {
+  display: flex;
+  flex-direction: column;
+  background-color: #202020;
+  padding: 30px;
+  margin-bottom: 30px;
+}
+.selected-works .works-list .work .work-title h3 {
+  font-size: 24px;
+  font-weight: 500;
+  font-family: Termina, sans-serif;
+  color: #e7e7e7;
+  margin-bottom: 30px;
+}
+.selected-works .works-list .work .work-title .work-description {
+  padding-right: 90px;
+  font-weight: 400;
+  font-family: Termina, sans-serif;
+  color: #e7e7e7;
+  margin-bottom: 30px;
+}
+.selected-works .works-list .work .stack p {
+  font-family: Termina, sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+}
+
+#stack {
+  margin-top: 120px;
+}
+#stack h2 {
+  font-size: 46px;
+  font-weight: 800;
+  font-family: Termina, sans-serif;
+  color: #E7E7E7;
+  width: 100%;
+  text-align: right;
+  margin-bottom: 90px;
+}
+#stack .logos-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 150px 150px 150px 150px 150px;
+  grid-template-areas: "react . tailwind ." ". next . strapi" "graphql . bootstrap ." ". woo . anime" "glide . shopi .";
+}
+#stack .logos-container img {
+  max-width: 105px;
+  max-height: 75px;
+}
+#stack .logos-container img.react-logo {
+  transform: translateY(-15px);
+  grid-area: react;
+}
+#stack .logos-container img.tailwind-logo {
+  transform: translateY(-15px);
+  grid-area: tailwind;
+}
+#stack .logos-container img.next-logo {
+  grid-area: next;
+}
+#stack .logos-container img.strapi-logo {
+  grid-area: strapi;
+}
+#stack .logos-container img.graphql-logo {
+  grid-area: graphql;
+}
+#stack .logos-container img.bootstrap-logo {
+  grid-area: bootstrap;
+}
+#stack .logos-container img.woo-logo {
+  grid-area: woo;
+}
+#stack .logos-container img.anime-logo {
+  grid-area: anime;
+}
+#stack .logos-container img.glide-logo {
+  grid-area: glide;
+}
+#stack .logos-container img.shopi-logo {
+  grid-area: shopi;
+}
+
+#quote {
+  padding-top: 120px;
+}
+#quote p {
+  font-family: Termina, sans-serif;
+  font-size: 82px;
+  font-weight: 800;
+}
+
+#contact .bubbles .bubble {
+  padding: 8px 15px;
+  background-color: #303030;
+  margin-bottom: 15px;
+  width: max-content;
+  border-radius: 20px 20px 20px 0;
+}
+#contact .bubbles .bubble span {
+  display: none;
 }
