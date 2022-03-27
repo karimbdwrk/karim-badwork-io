@@ -3,7 +3,9 @@ import React, { Component } from 'react';
 class Footer extends Component {
     render() { 
         return (
-            <p>FOOTER</p>
+            <div id="footer">
+                <p>© KARIM BAKHTI PORTFOLIO 2022 - BADWORK.IO</p>
+            </div>
         );
     }
 }
