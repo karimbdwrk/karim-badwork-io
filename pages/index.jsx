@@ -21,6 +21,17 @@ export default class Home extends React.Component {
       if (scrollY > window.innerHeight) {
         console.log('scroll 100%')
       }
+
+      anime({
+        targets: '#illustration svg path',
+        strokeDashoffset: [anime.setDashoffset, 0],
+        easing: 'easeInOutSine',
+        duration: 1500,
+        delay: function(el, i) { return i * 250 },
+        direction: 'alternate',
+        loop: true
+      });
+
     })
   }
 
@@ -45,21 +56,24 @@ export default class Home extends React.Component {
               <Hero />
               <Container>
                 <Row>
-                  <Col>
+                  <Col xs={7}>
                     <Description />
                   </Col>
-                  <Col>
+                  <Col xs={5}>
+                    <div id="profilPic">
+                      <img src="https://res.cloudinary.com/db9fhztig/image/upload/v1648504160/profil-krimo-bw_ap16bs.jpg" />
+                    </div>
                     <Works />
                     <Stack />
                   </Col>
                 </Row>
                 <Row>
-                  <Col>
+                  <Col xs={7}>
                     <div id="quote">
                       <p>I’m always interested about cool stuff 😎. <br />Are you minding project? 🤙</p>
                     </div>
                   </Col>
-                  <Col>
+                  <Col xs={5}>
                     <Contact />
                   </Col>
                 </Row>

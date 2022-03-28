@@ -44,6 +44,23 @@ class Contact extends React.Component {
         const bubbles = document.querySelectorAll('.bubble')
         let preventDelay = 0
 
+        const contactOffset = document.getElementById('contact').offsetTop
+
+        console.log('contactOffset :', contactOffset)
+
+
+        window.addEventListener('scroll', (event) => {
+
+            let scrollY = window.scrollY
+
+            if (scrollY > contactOffset) {
+                document.getElementById('contact').classList.add('show-bubbles')
+            } else {
+                document.getElementById('contact').classList.remove('show-bubbles')
+            }
+
+        })
+
         for (let bubble of bubbles) {
 
             let nbrOfI = 0
@@ -54,10 +71,10 @@ class Contact extends React.Component {
             for( let [ key ,value] of ans)
             {
                 // if()
-                console.log(`${key}  occurs  ${value} times` );
+                // console.log(`${key}  occurs  ${value} times` );
                 if (key === 'i' || key === 'l' || key === 'Ç' || key === '.' || key === ':') nbrOfI += value
                 if (key === 'k' || key === 'd' || key === '@' || key === 'w' || key === 'f' || key === 'h') nbrOfI -= value
-                console.log(nbrOfI)
+                // console.log(nbrOfI)
                 
             }
             
@@ -122,7 +139,7 @@ class Contact extends React.Component {
                 targets: bubble,
                 easing: "easeOutQuart"
             });
-            
+        
             animation
             .add({
                 translateY: ['100px', 0],
@@ -145,7 +162,8 @@ class Contact extends React.Component {
             }, '-=500')
 
             animation.finished.then(console.log('finished'));
-            console.log('bubble height :', bubble.querySelector('.txt').offsetHeight, '\nbubble width :', bubble.querySelector('.txt').offsetWidth)
+            // console.log('bubble height :', bubble.querySelector('.txt').offsetHeight, '\nbubble width :', bubble.querySelector('.txt').offsetWidth)
+
         }
 
         // anime({

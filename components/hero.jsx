@@ -28,6 +28,15 @@ class Hero extends React.Component {
                     delay: 0,
                     easing: "easeOutQuart"
                 });
+    
+                anime({
+                    targets: "#hero .img",
+                    // marginBottom: 360 + scrollY*4,
+                    translateY: - scrollY,
+                    loop: false,
+                    delay: 0,
+                    easing: "easeOutQuart"
+                });
             }
 
             if (scrollY > (window.innerHeight/3)) {
@@ -55,6 +64,7 @@ class Hero extends React.Component {
                         <a><img src="https://res.cloudinary.com/db9fhztig/image/upload/v1648312782/github-logo-000_tf6lvr.svg" /></a>
                     </Link>
                 </div>
+                <img className="img" src="https://res.cloudinary.com/db9fhztig/image/upload/v1647382530/rs_nqfpou.gif" alt="image de profil" />
             </div>
         )
 

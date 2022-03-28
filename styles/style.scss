@@ -200,6 +200,25 @@ body {
           }
         }
     }
+
+    img {
+      position: absolute;
+      justify-self: flex-start;
+      align-self: flex-start;
+      bottom: -50%;
+      // transform: translateY(100vh);
+    }
+}
+
+#profilPic {
+  display: flex;
+  justify-content: flex-end;
+  padding: 60px 0;
+  margin-bottom: 180px;
+
+  img {
+    max-height: 260px;
+  }
 }
 
 #description {
@@ -429,6 +448,7 @@ body {
 
   #contactForm {
     margin-top: 90px;
+    font-family: Termina, sans-serif;
 
     input, textarea {
       width: 100%;
@@ -462,6 +482,16 @@ body {
       textarea {
         height: 90px;
       }
+    }
+
+    button {
+      -webkit-appearance: none;
+      -moz-appearance: none;
+           appearance: none;
+      background-color: transparent;
+      color: #FFF;
+      width: 100%;
+      text-transform: uppercase;
     }
   }
 }

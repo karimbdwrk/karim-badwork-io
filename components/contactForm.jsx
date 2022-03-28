@@ -91,8 +91,8 @@ const ContactForm = () => (
                 <Field name="message" placeholder="Message *" as="textarea" />
                 {errors.message && touched.message ? <div>{errors.message}</div> : null}
             </div>
-            <button type="submit" disabled={isSubmitting ? 'disabled' : ''}>
-                Submit
+            <button className='btn' type="submit" disabled={isSubmitting ? 'disabled' : ''}>
+                Envoyer
             </button>
         </Form>
       )}

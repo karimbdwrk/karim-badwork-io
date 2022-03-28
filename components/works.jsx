@@ -37,7 +37,25 @@ class Works extends React.Component {
                         <div className="work">
                             <div className="work-title">
                                 <h3>Koleeum_<br /> Immo</h3>
-                                <p className="work-description">Agence immobilière 100% digitale</p>
+                                <p className="work-description">Agence Immobilière 100% Digitale</p>
+                            </div>
+                            <div className="stack">
+                                <p>UX, UI & Dev</p>
+                            </div>
+                        </div>
+                        <div className="work">
+                            <div className="work-title">
+                                <h3>Quartier_<br /> 10h10</h3>
+                                <p className="work-description">Agence d'ID</p>
+                            </div>
+                            <div className="stack">
+                                <p>UX, UI & Dev</p>
+                            </div>
+                        </div>
+                        <div className="work">
+                            <div className="work-title">
+                                <h3>Encre_<br /> Atelier</h3>
+                                <p className="work-description">E-shop Artwear & Home</p>
                             </div>
                             <div className="stack">
                                 <p>UX & Dev</p>
@@ -45,8 +63,26 @@ class Works extends React.Component {
                         </div>
                         <div className="work">
                             <div className="work-title">
-                                <h3>Koleeum_<br /> Immo</h3>
-                                <p className="work-description">Agence immobilière 100% digitale</p>
+                                <h3>Cubeek_<br /> 3D</h3>
+                                <p className="work-description">E-shop Impression 3D</p>
+                            </div>
+                            <div className="stack">
+                                <p>UX & UI</p>
+                            </div>
+                        </div>
+                        <div className="work">
+                            <div className="work-title">
+                                <h3>Clin_<br /> d'Œil Paris</h3>
+                                <p className="work-description">E-shop Créateur Textile <span>(soon)</span></p>
+                            </div>
+                            <div className="stack">
+                                <p>UX, UI & Dev</p>
+                            </div>
+                        </div>
+                        <div className="work">
+                            <div className="work-title">
+                                <h3>Agence_<br /> Leon</h3>
+                                <p className="work-description">Agence de Conseil en Relations Médias</p>
                             </div>
                             <div className="stack">
                                 <p>UX & Dev</p>
@@ -54,38 +90,38 @@ class Works extends React.Component {
                         </div>
                         <div className="work">
                             <div className="work-title">
-                                <h3>Koleeum_<br /> Immo</h3>
-                                <p className="work-description">Agence immobilière 100% digitale</p>
+                                <h3>Nascita_<br /> Italia</h3>
+                                <p className="work-description">E-shop Épicerie Fine Italienne</p>
                             </div>
                             <div className="stack">
-                                <p>UX & Dev</p>
+                                <p>UX, UI & Dev</p>
                             </div>
                         </div>
                         <div className="work">
                             <div className="work-title">
-                                <h3>Koleeum_<br /> Immo</h3>
-                                <p className="work-description">Agence immobilière 100% digitale</p>
+                                <h3>Structure_<br /> Paris</h3>
+                                <p className="work-description">E-shop Sneakers & Street Culture</p>
                             </div>
                             <div className="stack">
-                                <p>UX & Dev</p>
+                                <p>Dev</p>
                             </div>
                         </div>
                         <div className="work">
                             <div className="work-title">
-                                <h3>Koleeum_<br /> Immo</h3>
-                                <p className="work-description">Agence immobilière 100% digitale</p>
+                                <h3>Parashop_<br /></h3>
+                                <p className="work-description">E-shop Santé, Beauté & Bien-être</p>
                             </div>
                             <div className="stack">
-                                <p>UX & Dev</p>
+                                <p>Dev</p>
                             </div>
                         </div>
                         <div className="work">
                             <div className="work-title">
-                                <h3>Koleeum_<br /> Immo</h3>
-                                <p className="work-description">Agence immobilière 100% digitale</p>
+                                <h3>P F D_<br /></h3>
+                                <p className="work-description">E-shop d'Objets Pub</p>
                             </div>
                             <div className="stack">
-                                <p>UX & Dev</p>
+                                <p>Dev</p>
                             </div>
                         </div>
                     </div>
